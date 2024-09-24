@@ -26,3 +26,9 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+/*edita el color de la lista de peliculas*/
+.colorLista {
+    background-color: #343a40; 
+    color: white; 
+}

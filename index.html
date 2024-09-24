@@ -15,20 +15,40 @@
 <body class="bg-dark">
   <main>
     <div class="text-center container">
-      <div class="row py-lg-3">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light"><img src="img/japflix.png" alt=""></h1>
-          <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King">
-          <button class="btn btn-primary m-2" id="btnBuscar">Buscar</button>
+        <div class="row py-lg-3">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light"><img src="img/japflix.png" alt=""></h1>
+                <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King">
+                <button class="btn btn-primary m-2" id="btnBuscar">Buscar</button>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="album">
-      <ul class="list-group container" id="lista">
-      </ul>
+        <ul class="list-group container" id="lista">
+        </ul>
     </div>
-  </main>
+
+    <!-- Offcanvas para mostrar la información de la película seleccionada -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h5 id="titlePelicula"></h5>
+            <p id="overviewPelicula"></p>
+            <p><strong>Géneros:</strong> <span id="generosPelicula"></span></p>
+        </div>
+        <!-- botón para el desplegable con datos extra-->
+        <div class="dropdown text-end">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Más información
+          </button>
+          <ul class="dropdown-menu" id="moreInfo">
+          </ul>
+        </div>
+        
+</main>
 
   <footer class="text-muted py-3">
     <div class="container">
@@ -42,6 +62,7 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
